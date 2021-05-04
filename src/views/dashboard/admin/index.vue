@@ -1,5 +1,7 @@
 <template>
-  <div class="dashboard-editor-container">我是管理员，超有钱，吃香的喝辣的</div>
+  <div class="dashboard-editor-container">
+    我是管理员，超有钱，吃香的喝辣的<el-input></el-input>
+  </div>
 </template>
 
 <script>
