@@ -2,11 +2,18 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import ElementInit from "./element-ui-init";
 
-// 初始化element配置
-ElementInit();
+import "@/styles/index.scss"; // global css
 
+import "./element-ui-init";
+import "./icons"; // icon
+import "./permission";
+import "./utils/error-log"; // error log
+
+if (process.env.NODE_ENV === "production") {
+  const { mockXHR } = require("../mock");
+  mockXHR();
+}
 Vue.config.productionTip = false;
 
 new Vue({
